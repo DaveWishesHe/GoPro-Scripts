@@ -1,9 +1,10 @@
 import urllib, sys, getopt
 from lxml import html
+from os.path import expanduser
 
 def main(argv):
     url = "http://10.5.5.9:8080/videos/DCIM/100GOPRO/"
-    destination = "/home/dave/"
+    destination = expanduser("~")
     extension = ".MP4"
     try:
         opts, args = getopt.getopt(argv, "hvd:e:", ["help", "verbose", "destination=", "extension="])
